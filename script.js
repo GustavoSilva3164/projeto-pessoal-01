@@ -11,22 +11,17 @@ do {
 let gasExpense, foodExpense, leisureExpense, saveAmount;
 let salaryBracket;
 
-// Determinar a faixa salarial
-switch (true) {
-    case salary <= 1500:
-        salaryBracket = 1;
-        break;
-    case salary <= 2000:
-        salaryBracket = 2;
-        break;
-    case salary <= 3500:
-        salaryBracket = 3;
-        break;
-    case salary <= 5000:
-        salaryBracket = 4;
-        break;
-    default:
-        salaryBracket = 5;
+// Determinar a faixa salarial com else if e else
+if (salary <= 1500) {
+    salaryBracket = 1;
+} else if (salary <= 2000) {
+    salaryBracket = 2;
+} else if (salary <= 3500) {
+    salaryBracket = 3;
+} else if (salary <= 5000) {
+    salaryBracket = 4;
+} else {
+    salaryBracket = 5;
 }
 
 // Calcular as despesas com base na faixa salarial
@@ -63,7 +58,7 @@ switch (salaryBracket) {
         break;
 }
 
-// Mostrar os resultados
+// Exibir os resultados
 console.log(`Para uma média salarial de R$${salary.toFixed(2)}, é recomendado você gastar aproximadamente (ao mês):`);
 
 let expenses = ["Gasolina", "Alimento", "Lazer", "Guardar"];
@@ -77,3 +72,4 @@ let days = 30;
 let dailyFoodExpense = (foodExpense / days).toFixed(2);
 
 console.log(`Gasto diário médio com alimentação: R$${dailyFoodExpense}`);
+
